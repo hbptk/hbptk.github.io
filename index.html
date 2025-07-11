@@ -1,74 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Biz – Remote Accounting & Admin That Delivers</title>
-  <meta name="description" content="Global accounting, GST/VAT, payroll and admin support. Outsourced and remote. Reliable delivery, scalable service.">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Happy Biz</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f6f8;
+            color: #222;
+            line-height: 1.6;
+        }
+        header {
+            background: #ffffff;
+            color: #2c3e50;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        header p {
+            font-size: 1.2rem;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+        nav {
+            background-color: #eeeeee;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 10px 0;
+            font-weight: 500;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        section h2 {
+            color: #34495e;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <h1>Remote Accounting & Admin That Delivers</h1>
-    <p>We help businesses worldwide streamline their accounting, GST/VAT, payroll, and admin tasks — so you can focus on growth.</p>
-    <a href="#services" class="btn">Explore Our Services</a>
-  </header>
-
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#why">Why Us</a>
-    <a href="#process">Get Us On Board</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <main>
-    <section id="services">
-      <h2>What We Do</h2>
-      <p>Happy Biz offers professional accounting, tax, and admin support tailored for global firms, startups, and consultants.</p>
-      <ul>
-        <li><strong>Bookkeeping:</strong> Real-time reconciliation and ledger accuracy</li>
-        <li><strong>Tax & GST/VAT Filing:</strong> Global compliance handled timely</li>
-        <li><strong>Payroll:</strong> End-to-end processing for local & offshore teams</li>
-        <li><strong>Admin Support:</strong> Email/document handling, virtual coordination</li>
-        <li><strong>Custom Workflows:</strong> Adapted to your tools and timezone</li>
-      </ul>
+    <header>
+        <h1 class="fade-in">Remote Accounting & Admin That Delivers</h1>
+        <p class="fade-in">We help businesses worldwide handle accounting, GST/VAT, payroll & admin — so you can focus on growth.</p>
+    </header>
+    <nav>
+        <a href="#">Services</a>
+        <a href="#">Why Us</a>
+        <a href="#">Get Us On Board</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section class="fade-in">
+        <h2>What We Do</h2>
+        <p>Happy Biz offers accounting, tax, and admin support tailored for global firms, startups, and consultants.</p>
+        <ul>
+            <li><strong>Bookkeeping:</strong> Reconciliation and accuracy</li>
+            <li><strong>Tax & GST/VAT Filing:</strong> Timely compliance</li>
+            <li><strong>Payroll:</strong> Local & offshore teams</li>
+            <li><strong>Admin Support:</strong> Coordination and doc handling</li>
+            <li><strong>Custom Workflows:</strong> Tailored to your timezone & tools</li>
+        </ul>
     </section>
-
-    <section id="why">
-      <h2>Why Businesses Choose Happy Biz</h2>
-      <p>We’re more than just offshore help — we’re your extended team.</p>
-      <ul>
-        <li>📈 <strong>Scalable Services:</strong> Flexible support for solo or growing firms</li>
-        <li>🌍 <strong>Remote by Design:</strong> Secure, cloud-based operations</li>
-        <li>⏱️ <strong>Quick Turnaround:</strong> 24–48 hour job delivery</li>
-        <li>🔍 <strong>Accuracy First:</strong> Reviewed and quality-checked files</li>
-        <li>🌐 <strong>Timezone Advantage:</strong> While you sleep, we work</li>
-      </ul>
-    </section>
-
-    <section id="process">
-      <h2>Get Us On Board — Remote Accounting & Admin That Delivers</h2>
-      <p>Getting started with Happy Biz is simple and stress-free:</p>
-      <ol>
-        <li><strong>Discovery Call:</strong> Tell us your goals and workflow</li>
-        <li><strong>Secure Setup:</strong> We align tools, access, and timelines</li>
-        <li><strong>Pilot Run:</strong> Start with test files to refine process</li>
-        <li><strong>Reliable Delivery:</strong> Get work done on time — every time</li>
-      </ol>
-      <p>No lock-ins, no long contracts. Just quality work, delivered fast.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Let’s Talk</h2>
-      <p>Ready to offload your accounting or admin work?</p>
-      <p>Email us at <a href="mailto:teams@happybiz.in">teams@happybiz.in</a><br>
-         Call us: +91-6283404371</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Happy Biz. All rights reserved.</p>
-  </footer>
 </body>
 </html>
