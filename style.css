@@ -77,17 +77,20 @@ nav a {
 }
 .why-choose ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* better width */
+  gap: 1rem;
   list-style: none;
   padding: 0;
+  margin: 0;  /* fixes top-bottom spacing */
 }
+
 .why-choose ul li {
   background: #fff;
-  padding: 1rem;
+  padding: 1rem 1.2rem;
   border-left: 4px solid #004aad;
   border-radius: 6px;
   font-weight: 500;
+  line-height: 1.5;     /* improved line spacing */
 }
 .cta {
   background: #004aad;
