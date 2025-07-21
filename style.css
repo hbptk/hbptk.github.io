@@ -42,32 +42,14 @@ h2 {
   color: #004aad;
 }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+section {
+  padding: 2rem 1rem;
 }
 
-.service-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  text-align: center;
-}
-
-.service-icon {
-  width: 36px;
-  height: 36px;
-  display: block;
-  margin: 0 auto 1rem auto;
-  stroke: #666 !important;
-}
-
-.service-card h4 {
-  margin: 0.5rem 0 0.5rem;
-  font-size: 1.1rem;
+ul {
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .why-list {
@@ -100,7 +82,7 @@ h2 {
 }
 
 .testimonial-stars {
-  color: #ffc107;
+  color: #999;
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
   text-align: center;
@@ -114,25 +96,23 @@ h2 {
   text-align: right;
 }
 
-.btn {
-  background: #ffc107;
+.btn-grey {
+  background: #e0e0e0;
   color: #222;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-weight: 600;
+  padding: 0.6rem 1.2rem;
   text-decoration: none;
+  border-radius: 5px;
   display: inline-block;
   margin-top: 1rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
 }
 
-footer {
-  background: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+.btn-grey:hover {
+  background: #d4d4d4;
 }
-.btn {
+
+.btn-blue {
   background: #004aad;
   color: #fff;
   padding: 0.6rem 1.2rem;
@@ -141,4 +121,17 @@ footer {
   display: inline-block;
   margin-top: 1rem;
   font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.btn-blue:hover {
+  background: #003a84;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
