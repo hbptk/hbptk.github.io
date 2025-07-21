@@ -4,103 +4,123 @@ body {
   background-color: #f5f7fa;
   color: #222;
 }
+
 .container {
   width: 90%;
   max-width: 1100px;
   margin: auto;
-  padding: 1.2rem 0;
+  padding: 2rem 0;
 }
+
 header {
   background: #004aad;
   color: white;
-  padding: 1rem 0;
+  text-align: center;
+  padding: 2rem 1rem;
 }
+
 header h1 {
   margin: 0;
 }
+
 nav {
-  margin-top: 0.5rem;
+  background-color: #003a84;
+  text-align: center;
+  padding: 0.8rem 0;
 }
+
 nav a {
   color: white;
-  margin-right: 1rem;
+  margin: 0 1rem;
   text-decoration: none;
   font-weight: 500;
 }
-.hero {
-  background: linear-gradient(to right, #e9f2ff, #f4f9ff);
-  text-align: center;
-  padding: 4rem 1rem;
-}
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.hero-buttons {
-  margin-top: 1.5rem;
-}
-.btn, .btn-secondary {
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  margin: 0 0.5rem;
-  border-radius: 5px;
-  font-weight: 600;
-}
-.btn {
-  background: #004aad;
-  color: white;
-}
-.btn-secondary {
-  background: #fff;
-  color: #004aad;
-  border: 2px solid #004aad;
-}
-.content h3, .why-choose h3, .cta h3 {
-  font-size: 1.6rem;
+
+h2 {
+  font-size: 1.8rem;
   margin-bottom: 1rem;
+  color: #004aad;
 }
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 2rem;
 }
+
 .service-card {
   background: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.service-card h4 {
-  margin-top: 0;
-  font-size: 1.1rem;
-}
-.why-choose ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* better width */
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;  /* fixes top-bottom spacing */
+  text-align: center;
 }
 
-.why-choose ul li {
+.service-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.service-card h4 {
+  margin: 0.5rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.why-list li {
   background: #fff;
   padding: 1rem 1.2rem;
   border-left: 4px solid #004aad;
   border-radius: 6px;
   font-weight: 500;
-  line-height: 1.5;     /* improved line spacing */
+  line-height: 1.5;
 }
-.cta {
-  background: #004aad;
-  color: white;
-  text-align: center;
-  padding: 3rem 1rem;
+
+.testimonial-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-left: 5px solid #004aad;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-top: 2rem;
 }
+
+.testimonial-stars {
+  color: #ffc107;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-author {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  color: #333;
+}
+
+.quote-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  opacity: 0.5;
+}
+
 footer {
   background: #222;
   color: #ccc;
   text-align: center;
   padding: 1rem;
+  font-size: 0.9rem;
 }
