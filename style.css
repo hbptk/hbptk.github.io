@@ -1,10 +1,13 @@
+/* Base font and layout */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #f8f9fa;
-  color: #222;
+  background-color: #ffffff; /* Pure white background */
+  color: #343a40;            /* Sober grey for text */
+  line-height: 1.6;
 }
 
+/* Container */
 .container {
   width: 90%;
   max-width: 1100px;
@@ -12,36 +15,47 @@ body {
   padding: 2.5rem 0;
 }
 
+/* Header */
 header {
-  background: #343a40;
-  color: white;
+  background: #dee2e6;       /* Light grey header */
+  color: #212529;
   text-align: center;
   padding: 2.5rem 1rem;
+  border-bottom: 1px solid #ccc;
 }
 
 header h1 {
   margin: 0;
 }
 
+/* Navigation */
 nav {
-  background-color: #495057;
+  background-color: #f8f9fa;  /* Softer nav bar */
   text-align: center;
   padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
 }
 
 nav a {
-  color: white;
+  color: #343a40;
   margin: 0 1.2rem;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-h2 {
+nav a:hover {
+  color: #007bff;
+}
+
+/* Headings */
+h2, h3 {
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
-  color: #343a40;
+  color: #212529;
 }
 
+/* Service and Why Us lists */
 ul.service-list,
 ul.why-list {
   list-style: none;
@@ -56,6 +70,7 @@ ul.why-list li {
   font-size: 1rem;
   position: relative;
   padding-left: 1.5rem;
+  transition: all 0.3s ease;
 }
 
 ul.service-list li::before {
@@ -65,6 +80,7 @@ ul.service-list li::before {
   color: #6c757d;
 }
 
+/* Buttons */
 .btn-grey {
   background-color: #6c757d;
   color: white;
@@ -74,12 +90,43 @@ ul.service-list li::before {
   text-decoration: none;
   display: inline-block;
   margin-top: 1rem;
+  transition: background-color 0.3s ease;
 }
 
+.btn-grey:hover {
+  background-color: #5a6268;
+}
+
+/* Footer */
 footer {
-  background: #222;
-  color: #ccc;
+  background: #f8f9fa;
+  color: #6c757d;
   text-align: center;
   padding: 1.2rem;
   font-size: 0.9rem;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Smooth fade-in animation (optional) */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+section:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+section:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+section:nth-of-type(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
