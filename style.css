@@ -16,7 +16,6 @@ body {
 }
 
 /* Header */
-/* Header - now white with grey text */
 header {
   background: #ffffff;
   color: #212529;
@@ -25,7 +24,6 @@ header {
   border-bottom: 1px solid #dee2e6;
 }
 
-/* Navigation bar - clean white */
 nav {
   background-color: #ffffff;
   text-align: center;
