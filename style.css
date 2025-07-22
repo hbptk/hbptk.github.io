@@ -23,13 +23,13 @@ header h1 {
   margin: 0;
 }
 
-nav {
+.nav {
   background-color: #003a84;
   text-align: center;
   padding: 0.8rem 0;
 }
 
-nav a {
+.nav a {
   color: white;
   margin: 0 1rem;
   text-decoration: none;
@@ -42,90 +42,31 @@ h2 {
   color: #004aad;
 }
 
-section {
-  padding: 2rem 1rem;
-}
-
-ul {
-  padding-left: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.6;
+.services-list,
+.why-list {
+  line-height: 1.8;
+  font-size: 17px;
+  padding-left: 20px;
 }
 
 .why-list {
   list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  padding-left: 0;
 }
 
 .why-list li {
-  background: #fff;
-  padding: 1rem 1.2rem;
-  border-left: 4px solid #004aad;
-  border-radius: 6px;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-.testimonial-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-left: 5px solid #004aad;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  font-style: italic;
-  line-height: 1.6;
-  font-size: 1.05rem;
-  margin-top: 2rem;
-}
-
-.testimonial-stars {
-  color: #999;
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.testimonial-author {
-  margin-top: 1rem;
-  font-weight: bold;
-  font-style: normal;
-  color: #333;
-  text-align: right;
+  margin-bottom: 0.8rem;
 }
 
 .btn-grey {
-  background: #e0e0e0;
-  color: #222;
-  padding: 0.6rem 1.2rem;
+  background-color: #555;
+  color: white;
+  padding: 0.7rem 1.4rem;
   text-decoration: none;
   border-radius: 5px;
+  font-weight: 500;
   display: inline-block;
   margin-top: 1rem;
-  font-weight: 500;
-  transition: background 0.2s ease;
-}
-
-.btn-grey:hover {
-  background: #d4d4d4;
-}
-
-.btn-blue {
-  background: #004aad;
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: 500;
-  transition: background 0.2s ease;
-}
-
-.btn-blue:hover {
-  background: #003a84;
 }
 
 footer {
