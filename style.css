@@ -23,13 +23,13 @@ header h1 {
   margin: 0;
 }
 
-.nav {
+nav {
   background-color: #003a84;
   text-align: center;
   padding: 0.8rem 0;
 }
 
-.nav a {
+nav a {
   color: white;
   margin: 0 1rem;
   text-decoration: none;
@@ -42,26 +42,33 @@ h2 {
   color: #004aad;
 }
 
-.services-list,
-.why-list {
-  line-height: 1.8;
-  font-size: 17px;
-  padding-left: 20px;
-}
-
-.why-list {
+ul.service-list,
+ul.why-list {
   list-style: none;
   padding-left: 0;
+  margin: 1rem 0;
 }
 
-.why-list li {
-  margin-bottom: 0.8rem;
+ul.service-list li,
+ul.why-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+ul.service-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #004aad;
 }
 
 .btn-grey {
   background-color: #555;
   color: white;
-  padding: 0.7rem 1.4rem;
+  padding: 0.6rem 1.2rem;
   text-decoration: none;
   border-radius: 5px;
   font-weight: 500;
