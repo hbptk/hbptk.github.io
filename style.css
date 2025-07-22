@@ -16,32 +16,28 @@ body {
 }
 
 /* Header */
+/* Header - now white with grey text */
 header {
-  background: #dee2e6;       /* Light grey header */
+  background: #ffffff;
   color: #212529;
   text-align: center;
   padding: 2.5rem 1rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #dee2e6;
 }
 
-header h1 {
-  margin: 0;
-}
-
-/* Navigation */
+/* Navigation bar - clean white */
 nav {
-  background-color: #f8f9fa;  /* Softer nav bar */
+  background-color: #ffffff;
   text-align: center;
   padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dee2e6;
 }
 
 nav a {
-  color: #343a40;
+  color: #495057;
   margin: 0 1.2rem;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
 nav a:hover {
