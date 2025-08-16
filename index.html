@@ -1,76 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Biz - Remote Accounting & Admin</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+import { createPageUrl } from "@/utils";
+import { 
+  BarChart3, 
+  Megaphone, 
+  Code, 
+  Users, 
+  TrendingUp, 
+  Shield, 
+  ArrowRight,
+  CheckCircle
+} from "lucide-react";
 
-  <header class="container">
-    <h1>Happy Biz — Remote Accounting & Admin That Delivers</h1>
-    <p>Happy Biz helps businesses worldwide streamline accounting, GST/VAT, payroll, and admin tasks — so you can focus on growth.</p>
-  </header>
+export default function Services() {
+  const services = [
+    {
+      icon: BarChart3,
+      title: "Business Strategy & Consulting",
+      description: "Strategic planning and business analysis to help you make informed decisions and achieve sustainable growth.",
+      features: ["Market Analysis", "Strategic Planning", "Performance Optimization", "Risk Assessment"],
+      popular: true
+    },
+    {
+      icon: Megaphone,
+      title: "Digital Marketing Solutions",
+      description: "Comprehensive digital marketing strategies to increase your online presence and drive customer engagement.",
+      features: ["Social Media Marketing", "SEO Optimization", "Content Strategy", "Brand Development"]
+    },
+    {
+      icon: Code,
+      title: "Technology Solutions",
+      description: "Custom software development and IT solutions to streamline your operations and improve efficiency.",
+      features: ["Custom Software", "System Integration", "Cloud Solutions", "Technical Support"]
+    },
+    {
+      icon: Users,
+      title: "Team Development",
+      description: "Training and development programs to enhance your team's skills and productivity.",
+      features: ["Leadership Training", "Skill Development", "Team Building", "Performance Coaching"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Growth Optimization",
+      description: "Data-driven approaches to identify growth opportunities and optimize business processes.",
+      features: ["Process Improvement", "Data Analytics", "Growth Strategy", "ROI Optimization"]
+    },
+    {
+      icon: Shield,
+      title: "Compliance & Risk Management",
+      description: "Ensure your business meets regulatory requirements and minimize operational risks.",
+      features: ["Compliance Audits", "Risk Assessment", "Policy Development", "Regulatory Support"]
+    }
+  ];
 
-  <nav class="container">
-    <a href="#services">Services</a>
-    <a href="#why-us">Why Us</a>
-    <a href="#onboard">Get Us On Board</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  return (
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Our Services</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Comprehensive business solutions designed to drive growth, 
+            improve efficiency, and help you achieve your goals.
+          </p>
+          <Link to={createPageUrl("Contact")}>
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              Get Started Today
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
+        </div>
+      </section>
 
-  <section id="services" class="container">
-    <h2>What We Do</h2>
-    <ul class="service-list">
-      <li><strong>Bookkeeping:</strong> Real-time reconciliation and ledger accuracy</li>
-      <li><strong>Tax & GST/VAT Filing:</strong> Global compliance handled timely</li>
-      <li><strong>Payroll:</strong> End-to-end processing for local & offshore teams</li>
-      <li><strong>Admin Support:</strong> Email/document handling, virtual coordination</li>
-      <li><strong>Financial Preparation:</strong> P&L, Balance Sheet, Management Reporting</li>
-      <li><strong>Custom Workflows:</strong> Adapted to your tools and timezone</li>
-    </ul>
-  </section>
+      {/* Services Grid */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Card key={index} className="relative border-none shadow-lg hover:shadow-xl transition-all duration-300 group">
+                {service.popular && (
+                  <div className="absolute -top-3 left-4">
+                    <Badge className="bg-blue-600 text-white">Most Popular</Badge>
+                  </div>
+                )}
+                
+                <CardHeader className="text-center pt-8">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+                    <service.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <CardTitle className="text-xl text-gray-900">{service.title}</CardTitle>
+                </CardHeader>
+                
+                <CardContent className="space-y-4">
+                  <p className="text-gray-600 text-center">{service.description}</p>
+                  
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <span className="text-sm text-gray-600">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
 
-  <section id="why-us" class="container">
-    <h2>Why Businesses Choose Happy Biz</h2>
-    <ul class="why-list">
-      <li>✅ <strong>Scalable Services:</strong> Flexible support for solo or growing firms</li>
-      <li>✅ <strong>Remote by Design:</strong> Secure, cloud-based operations</li>
-      <li>✅ <strong>Quick Turnaround:</strong> 24–48 hour job delivery</li>
-      <li>✅ <strong>Accuracy First:</strong> Reviewed and quality-checked files</li>
-      <li>✅ <strong>Timezone Advantage:</strong> While you sleep, we work</li>
-    </ul>
-  </section>
+                  <div className="pt-4">
+                    <Link to={createPageUrl("Contact")}>
+                      <Button variant="outline" className="w-full group-hover:bg-blue-50 group-hover:border-blue-300">
+                        Learn More
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
-  <section id="onboard" class="container">
-    <h2>Get Us On Board — Remote Accounting & Admin That Delivers</h2>
-    <p>Getting started with Happy Biz is simple and stress-free.</p>
-    <p><strong>Pricing:</strong> We offer flexible pricing — hourly, per-job, or monthly — tailored to your workflow and budget. We’ll share an estimate after understanding your scope.</p>
-    <p><strong>Next Step:</strong> 
-      <a 
-        href="https://docs.google.com/forms/d/e/1FAIpQLSez6K2WnkFHenGhjoehzTyCBp8SZrKbyvi3F3rQMrZH7pJMmA/viewform?usp=dialog" 
-        target="_blank" 
-        class="btn-grey">
-        Start Your Project
-      </a> and we’ll get in touch!
-    </p>
-  </section>
+      {/* Process Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">How We Work</h2>
+            <p className="text-lg text-gray-600">
+              Our proven process ensures successful outcomes for every project
+            </p>
+          </div>
 
-  <section class="container">
-    <h2>About Happy Biz</h2>
-    <p>Happy Biz is a remote-first accounting and admin support firm, working with clients across New Zealand, Australia, and beyond. We’re known for accuracy, speed, and adaptability — all delivered with zero overhead for your business.</p>
-  </section>
-
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <p>Email us at <a href="mailto:teams@happybiz.in">teams@happybiz.in</a></p>
-    <p>Phone: +91-6283404371</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Happy Biz. All rights reserved.
-  </footer>
-
-</body>
-</html>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: "01", title: "Discovery", desc: "Understanding your needs and challenges" },
+              { step: "02", title: "Strategy", desc: "Developing tailored solutions" },
+              { step: "03", title: "Implementation", desc: "Executing with precision and care" },
+              { step: "04", title: "Support", desc: "Ongoing assistance and optimization" }
+            ].map((phase, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                  {phase.step}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{phase.title}</h3>
+                <p className="text-gray-600">{phase.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
