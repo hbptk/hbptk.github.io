@@ -1,30 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About - Happy Biz</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Happy Biz</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Target, Heart, Lightbulb, Users } from "lucide-react";
+
+export default function About() {
+  const values = [
+    {
+      icon: Target,
+      title: "Excellence",
+      description: "We strive for excellence in every project and interaction with our clients."
+    },
+    {
+      icon: Heart,
+      title: "Integrity",
+      description: "Honest, transparent business practices form the foundation of our relationships."
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovation",
+      description: "We embrace new technologies and creative solutions to solve business challenges."
+    },
+    {
+      icon: Users,
+      title: "Collaboration",
+      description: "Success comes through strong partnerships and open communication with clients."
+    }
+  ];
+
+  return (
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">About HappyBiz</h1>
+          <p className="text-xl text-gray-600 leading-relaxed">
+            We are a forward-thinking business solutions company dedicated to helping 
+            organizations thrive in today's competitive landscape. With over a decade of 
+            experience, we've built a reputation for delivering results that matter.
+          </p>
         </div>
-    </header>
-    <section class="content">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Happy Biz is a trusted partner for outsourcing accounting and taxation work for New Zealand CA firms. Based in India, we offer reliable, cost-effective services with full confidentiality and accuracy.</p>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12">
+            <Card className="border-none shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl text-gray-900">Our Mission</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  To empower businesses with innovative solutions, strategic insights, and 
+                  dedicated support that drives sustainable growth and success. We believe 
+                  every business has unique potential, and we're here to help unlock it.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl text-gray-900">Our Vision</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  To become the most trusted partner for businesses seeking transformation 
+                  and growth. We envision a future where every organization we work with 
+                  achieves exceptional results through our collaborative approach.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-    </section>
-    <footer>
-        <p>&copy; 2025 Happy Biz. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+      </section>
+
+      {/* Core Values */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Core Values</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              These principles guide everything we do and shape our relationships with clients
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <Card key={index} className="text-center border-none shadow-lg hover:shadow-xl transition-shadow">
+                <CardContent className="pt-8">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Expertise</h2>
+          <p className="text-lg text-gray-600 mb-12">
+            Our team brings together diverse backgrounds in business strategy, technology, 
+            marketing, and operations to provide comprehensive solutions for your success.
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
+              <div className="text-gray-600">Years of Experience</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-gray-600">Successful Projects</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
+              <div className="text-gray-600">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
