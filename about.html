@@ -1,129 +1,66 @@
-import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Target, Heart, Lightbulb, Users } from "lucide-react";
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Happy Biz</title>
+<meta name="description" content="Accurate books, predictable delivery and clear communication for organisations of all sizes.">
+<link rel="stylesheet" href="styles.css"></head><body>
+<header class="header"><div class="container header-inner">
+  <div class="brand">Happy Biz</div>
+  <nav class="nav">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a>
+  </nav>
+</div></header>
 
-export default function About() {
-  const values = [
-    {
-      icon: Target,
-      title: "Excellence",
-      description: "We strive for excellence in every project and interaction with our clients."
-    },
-    {
-      icon: Heart,
-      title: "Integrity",
-      description: "Honest, transparent business practices form the foundation of our relationships."
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation",
-      description: "We embrace new technologies and creative solutions to solve business challenges."
-    },
-    {
-      icon: Users,
-      title: "Collaboration",
-      description: "Success comes through strong partnerships and open communication with clients."
-    }
-  ];
+<main class="container">
+  <section class="hero">
+    <h1 class="section-title">About Happy Biz</h1>
+    <p class="section-text">
+      We’re a hands-on accounting and operations partner for teams and organisations — property,
+      projects, professional services and more. Our promise: accurate books, predictable delivery,
+      and clear communication.
+    </p>
+  </section>
 
-  return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">About HappyBiz</h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            We are a forward-thinking business solutions company dedicated to helping 
-            organizations thrive in today's competitive landscape. With over a decade of 
-            experience, we've built a reputation for delivering results that matter.
-          </p>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="border-none shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-2xl text-gray-900">Our Mission</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  To empower businesses with innovative solutions, strategic insights, and 
-                  dedicated support that drives sustainable growth and success. We believe 
-                  every business has unique potential, and we're here to help unlock it.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-none shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-2xl text-gray-900">Our Vision</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  To become the most trusted partner for businesses seeking transformation 
-                  and growth. We envision a future where every organization we work with 
-                  achieves exceptional results through our collaborative approach.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Core Values</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              These principles guide everything we do and shape our relationships with clients
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="text-center border-none shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="pt-8">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Expertise</h2>
-          <p className="text-lg text-gray-600 mb-12">
-            Our team brings together diverse backgrounds in business strategy, technology, 
-            marketing, and operations to provide comprehensive solutions for your success.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
-              <div className="text-gray-600">Years of Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-gray-600">Successful Projects</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
-              <div className="text-gray-600">Client Satisfaction</div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <section class="grid-2">
+    <div class="card">
+      <h3 style="margin:0 0 8px">Principles</h3>
+      <ul class="list section-text">
+        <li>Consistency over heroics</li>
+        <li>Documented processes & checklists</li>
+        <li>Least-privilege access & secure exchange</li>
+        <li>Transparent timelines & pricing</li>
+      </ul>
     </div>
-  );
-}
+    <div class="card">
+      <h3 style="margin:0 0 8px">Process</h3>
+      <ol class="list section-text">
+        <li><b>Onboarding:</b> access, scopes, templates</li>
+        <li><b>Production:</b> coding, reconciliations, follow-ups</li>
+        <li><b>Review:</b> QA & exceptions</li>
+        <li><b>Handover:</b> finalise & close</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="grid-2" style="margin-top:16px">
+    <div class="card">
+      <div class="row"><img class="icon" src="assets/report.svg" alt="Stack"><h3>Stack</h3></div>
+      <p class="section-text" style="margin:8px 0 0">Xero · QuickBooks · Zoho Books · Tally (exports) · Excel/Sheets · Drive/Dropbox · Email/Ticketing</p>
+    </div>
+    <div class="card">
+      <div class="row"><img class="icon" src="assets/shield.svg" alt="Security"><h3>Quality & Security</h3></div>
+      <ul class="list section-text" style="margin:8px 0 0">
+        <li>Peer review & audit trails</li>
+        <li>Encrypted document exchange</li>
+        <li>2FA where available</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container footer-inner">
+  <div>© <span id="y"></span> Happy Biz. All rights reserved.</div>
+  <div class="muted">teams@happybiz.in · +91 62834 04371</div>
+</div></footer>
+<script>document.getElementById('y').textContent=(new Date).getFullYear();</script>
+<script src="script.js"></script>
+</body></html>
