@@ -1,33 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Biz - About</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <h1>About Happy Biz</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Happy Biz</title>
+<meta name="description" content="Accurate books, predictable delivery and clear communication for organisations of all sizes.">
+<link rel="stylesheet" href="styles.css"></head><body>
+<header class="header"><div class="container header-inner">
+  <div class="brand">Happy Biz</div>
+  <nav class="nav">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a>
+  </nav>
+</div></header>
 
-  <main class="container">
-    <h2>Who We Are</h2>
-    <p>
-      Happy Biz is your trusted partner for Reliable, Scalable, and
-      Technology-driven Back-Office solutions. We support global clients with
-      bookkeeping, GST & Tax compliance, and outsourced admin work.
+<main class="container">
+  <section class="hero">
+    <h1 class="section-title">About Happy Biz</h1>
+    <p class="section-text">
+      We’re a hands-on accounting and operations partner for teams and organisations — property,
+      projects, professional services and more. Our promise: accurate books, predictable delivery,
+      and clear communication.
     </p>
-  </main>
+  </section>
 
-  <footer>
-    <p>© 2025 Happy Biz. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+  <section class="grid-2">
+    <div class="card">
+      <h3 style="margin:0 0 8px">Principles</h3>
+      <ul class="list section-text">
+        <li>Consistency over heroics</li>
+        <li>Documented processes & checklists</li>
+        <li>Least-privilege access & secure exchange</li>
+        <li>Transparent timelines & pricing</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Process</h3>
+      <ol class="list section-text">
+        <li><b>Onboarding:</b> access, scopes, templates</li>
+        <li><b>Production:</b> coding, reconciliations, follow-ups</li>
+        <li><b>Review:</b> QA & exceptions</li>
+        <li><b>Handover:</b> finalise & close</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="grid-2" style="margin-top:16px">
+    <div class="card">
+      <div class="row"><img class="icon" src="assets/report.svg" alt="Stack"><h3>Stack</h3></div>
+      <p class="section-text" style="margin:8px 0 0">Xero · QuickBooks · Zoho Books · Tally (exports) · Excel/Sheets · Drive/Dropbox · Email/Ticketing</p>
+    </div>
+    <div class="card">
+      <div class="row"><img class="icon" src="assets/shield.svg" alt="Security"><h3>Quality & Security</h3></div>
+      <ul class="list section-text" style="margin:8px 0 0">
+        <li>Peer review & audit trails</li>
+        <li>Encrypted document exchange</li>
+        <li>2FA where available</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container footer-inner">
+  <div>© <span id="y"></span> Happy Biz. All rights reserved.</div>
+  <div class="muted">teams@happybiz.in · +91 62834 04371</div>
+</div></footer>
+<script>document.getElementById('y').textContent=(new Date).getFullYear();</script>
+<script src="script.js"></script>
+</body></html>

@@ -1,34 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Biz - Services</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <h1>Our Services</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services — Happy Biz</title>
+<meta name="description" content="Bookkeeping, reconciliation, reporting, compliance and admin support — for any team.">
+<link rel="stylesheet" href="styles.css"></head><body>
+<header class="header"><div class="container header-inner">
+  <div class="brand">Happy Biz</div>
+  <nav class="nav">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a>
+  </nav>
+</div></header>
 
-  <main class="container">
-    <ul>
-      <li>Bookkeeping & GL Coding</li>
-      <li>GST & Tax Compliances</li>
-      <li>Management Reports</li>
-      <li>Year-End Preparation</li>
-      <li>Admin Work</li>
+<main class="container">
+  <section class="hero">
+    <h1 class="section-title">Services</h1>
+    <p class="section-text">Pick a monthly plan or assign project-based work. We plug into your tools and match your workflow.</p>
+  </section>
+
+  <section class="grid-2">
+    <div class="card">
+      <div class="row"><img class="icon" src="assets/ops.svg" alt="Bookkeeping"><h3>Bookkeeping & Reconciliation</h3></div>
+      <ul class="list section-text">
+        <li>Bank/ledger reconciliations</li><li>Supplier bills & receivables</li>
+        <li>Month-end close & schedules</li><li>Catch-up/cleanup as required</li>
+      </ul>
+      <p class="section-text">Outcome: up-to-date books and cleaner reviews.</p>
+    </div>
+
+    <div class="card">
+      <div class="row"><img class="icon" src="assets/report.svg" alt="Reporting"><h3>Reporting & Insights</h3></div>
+      <ul class="list section-text">
+        <li>Monthly P&amp;L & Balance Sheet</li><li>AR/AP & cashflow views</li>
+        <li>Variance checks & commentary</li><li>Stakeholder-ready exports</li>
+      </ul>
+      <p class="section-text">Outcome: clarity on performance and cash.</p>
+    </div>
+
+    <div class="card">
+      <div class="row"><img class="icon" src="assets/shield.svg" alt="Compliance"><h3>Compliance & Returns</h3></div>
+      <ul class="list section-text">
+        <li>Document hygiene & audit trails</li><li>Period-end workpapers</li>
+        <li>Coordination for statutory filings</li><li>Reminders so nothing slips</li>
+      </ul>
+      <p class="section-text">Outcome: fewer last-minute surprises.</p>
+    </div>
+
+    <div class="card">
+      <div class="row"><img class="icon" src="assets/flow.svg" alt="Admin"><h3>Admin & Workflow Support</h3></div>
+      <ul class="list section-text">
+        <li>Follow-ups for missing docs</li><li>Deadline tracking & status</li>
+        <li>Template automation & rules</li><li>Light vendor/AR communication</li>
+      </ul>
+      <p class="section-text">Outcome: smoother cycles and predictable delivery.</p>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:16px">
+    <h3 style="margin:0 0 6px">Engagement models</h3>
+    <ul class="list section-text" style="margin:0">
+      <li><b>Monthly plan</b> — steady volume, predictable cost</li>
+      <li><b>Project-based</b> — audits, cleanups, migrations</li>
+      <li><b>On-demand</b> — short bursts during peak times</li>
     </ul>
-  </main>
+  </section>
+</main>
 
-  <footer>
-    <p>© 2025 Happy Biz. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+<footer class="footer"><div class="container footer-inner">
+  <div>© <span id="y"></span> Happy Biz. All rights reserved.</div>
+  <div class="muted">teams@happybiz.in · +91 62834 04371</div>
+</div></footer>
+<script>document.getElementById('y').textContent=(new Date).getFullYear();</script>
+<script src="script.js"></script>
+</body></html>
