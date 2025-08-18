@@ -51,6 +51,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   height: 64px;
+  padding-top: 2px;
 }
 
 .brand {
@@ -59,7 +60,10 @@ a:hover {
   color: var(--brand2);
   letter-spacing: -0.25px;
   padding: 8px 12px;
+  margin-left: 4px;
   border-radius: 8px;
+  display: inline-block;
+  line-height: 1.2;
   transition: background 0.2s ease;
   text-decoration: none;
 }
@@ -235,6 +239,13 @@ textarea {
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 4px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
 }
 
 /* Accessibility */
@@ -275,10 +286,3 @@ textarea:focus {
     gap: 8px;
   }
 }
-
-/* Optional: Hide broken image icons if needed */
-/*
-.icon:not([src]) {
-  display: none;
-}
-*/
