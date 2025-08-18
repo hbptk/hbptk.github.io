@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Biz</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Biz — Accounting & Operations Support</title>
+  <meta name="description" content="Reliable bookkeeping, reporting, compliance and admin workflow support for growing teams." />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
-    <div class="container">
-      <div class="logo">
-        <h1>Happy Biz</h1>
-        <p class="tagline">Simple · Scalable · Secure</p>
+    <div class="container header-inner">
+      <div class="brand-block">
+        <div class="brand">Happy Biz</div>
+        <div class="tagline">Simple · Scalable · Secure</div>
       </div>
       <nav class="nav">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
@@ -23,60 +23,81 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero container">
-    <h2>Reliable Accounting & Operations support for growing teams</h2>
-    <p>
-      We keep your books clean, reports clear, and workflows on time —
-      without tying ourselves to any one industry. Easy to start, easy to work with.
-    </p>
+  <main class="container">
+    <section class="hero">
+      <h1 class="section-title">Reliable Accounting & Operations support for growing teams</h1>
+      <p class="section-text lead">
+        We keep your books clean, reports clear, and workflows on time — without tying ourselves
+        to any one industry. Easy to start, easy to work with.
+      </p>
+    </section>
 
-    <div class="cards">
+    <!-- Top service cards (3 across) -->
+    <section class="grid-3">
       <div class="card">
-        <h3>Bookkeeping & Reconciliation</h3>
-        <p>Bank/ledger recs, supplier bills, receivables and a clean month-end close.</p>
+        <h3><strong>Bookkeeping & Reconciliation</strong></h3>
+        <p class="section-text">Bank/ledger recs, supplier bills, receivables and a clean month-end close.</p>
       </div>
+
       <div class="card">
-        <h3>Reporting & Insights</h3>
-        <p>
-          <strong>Monthly packs:</strong> AR/AP, GST/BAS/VAT returns and Management Reports <br><br>
+        <h3><strong>Reporting & Insights</strong></h3>
+        <p class="section-text">
+          <strong>Monthly packs:</strong> AR/AP, GST/BAS/VAT returns and Management Reports<br><br>
           <strong>Yearly pack:</strong> Financial Statements, Tax Returns and Workpapers
         </p>
       </div>
+
       <div class="card">
-        <h3>Workflow & Admin</h3>
-        <p>Document handling, deadline tracking, and follow-ups so nothing slips.</p>
+        <h3><strong>Workflow & Admin</strong></h3>
+        <p class="section-text">Document handling, deadline tracking, and follow-ups so nothing slips.</p>
       </div>
-    </div>
+    </section>
 
-    <!-- Stats -->
-    <div class="stats">
-      <div class="stat"><p>Financials Prepared</p><h3>1500+</h3></div>
-      <div class="stat"><p>Tax Returns Filed</p><h3>3000+</h3></div>
-      <div class="stat"><p>On-time Delivery</p><h3>98%</h3></div>
-      <div class="stat"><p>Years Experience</p><h3>10+</h3></div>
-    </div>
+    <!-- KPIs (3 on first row, 1 on second like your earlier layout) -->
+    <section class="grid-3" style="margin-top:16px">
+      <div class="card">
+        <div class="kpi-label">Financials Prepared</div>
+        <div class="kpi-value">1500+</div>
+      </div>
+      <div class="card">
+        <div class="kpi-label">Tax Returns Filed</div>
+        <div class="kpi-value">3000+</div>
+      </div>
+      <div class="card">
+        <div class="kpi-label">On-time Delivery</div>
+        <div class="kpi-value">98%</div>
+      </div>
+      <div class="card">
+        <div class="kpi-label">Years Experience</div>
+        <div class="kpi-value">10+</div>
+      </div>
+    </section>
 
-    <!-- Engagement -->
-    <div class="card full-width">
-      <h3>How we engage</h3>
-      <ol>
+    <!-- How we engage -->
+    <section class="card" style="margin-top:20px">
+      <h3 style="margin:0 0 6px"><strong>How we engage</strong></h3>
+      <ol class="list section-text">
         <li><strong>Discovery</strong> — scope, tools, timelines</li>
         <li><strong>Handover</strong> — access & templates, quick kickoff</li>
         <li><strong>Weekly work</strong> — bookkeeping & reconciliations</li>
         <li><strong>Month-end</strong> — reports & exceptions</li>
         <li><strong>Review Meet</strong> — weekly/fortnightly meet for improvements & planning</li>
       </ol>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+    <!-- CTA -->
+    <section class="card" style="margin-top:20px; text-align:center">
+      <a href="contact.html" class="btn">Get Started Today</a>
+    </section>
+  </main>
+
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Happy Biz. All rights reserved.</p>
+    <div class="container footer-inner">
+      <div>© <span id="y"></span> Happy Biz. All rights reserved.</div>
     </div>
   </footer>
 
+  <script>document.getElementById('y').textContent = (new Date).getFullYear();</script>
   <script src="script.js"></script>
 </body>
 </html>
