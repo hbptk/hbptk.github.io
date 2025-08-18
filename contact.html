@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Happy Biz</title>
-  <meta name="description" content="Contact Happy Biz for accounting, reporting and operational support.">
-  <meta name="keywords" content="Contact, Support, Accounting Help, Bookkeeping, Remote Finance Team">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Get in touch with Happy Biz for accounting and operations support." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="header">
-  <div class="container header-inner">
-    <a href="index.html" class="brand">Happy Biz</a>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-  <section class="hero">
-    <h1 class="section-title">Let’s Work Together</h1>
-    <p class="section-text">
-      Whether you're ready to start or just want to explore fit, we’re happy to talk. Reach out via the form or direct email.
-    </p>
-  </section>
-
-  <section class="card" style="max-width:600px;margin:0 auto">
-    <form action="https://formsubmit.co/teams@happybiz.in" method="POST">
-      <div style="margin-bottom:16px">
-        <label for="name">Your Name</label><br>
-        <input type="text" id="name" name="name" required placeholder="Your Name">
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand-block">
+        <div class="brand">Happy Biz</div>
+        <div class="tagline">Simple · Scalable · Secure</div>
       </div>
-      <div style="margin-bottom:16px">
-        <label for="email">Your Email</label><br>
-        <input type="email" id="email" name="email" required placeholder="you@example.com">
-      </div>
-      <div style="margin-bottom:16px">
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
-      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-      <!-- Optional: Disable captcha (optional) -->
-      <input type="hidden" name="_captcha" value="false">
+  <main class="container">
+    <section class="hero">
+      <h1 class="section-title">Get in Touch</h1>
+      <p class="section-text">
+        Let us know your requirements or ask a question. We usually reply within 24 hours.
+      </p>
+    </section>
 
-      <!-- Optional: Thank-you redirect -->
-      <!-- <input type="hidden" name="_next" value="https://happybiz.in/thanks.html"> -->
+    <section class="card" style="margin-top: 20px;">
+      <form action="https://formsubmit.co/teams@happybiz.in" method="POST">
+        <div style="margin-bottom: 16px;">
+          <label for="name">Your Name</label><br />
+          <input type="text" id="name" name="name" required />
+        </div>
 
-      <button type="submit" class="btn">📩 Send Message</button>
-    </form>
-  </section>
+        <div style="margin-bottom: 16px;">
+          <label for="email">Your Email</label><br />
+          <input type="email" id="email" name="email" required />
+        </div>
 
-  <section class="card" style="margin-top:24px; text-align:center">
-    <p class="section-text" style="margin:0">
-      Prefer direct contact? Email us at <a href="mailto:teams@happybiz.in">teams@happybiz.in</a> or call +91 62834 04371
-    </p>
-  </section>
-</main>
+        <div style="margin-bottom: 16px;">
+          <label for="message">Message</label><br />
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <div>© <span id="y"></span> Happy Biz. All rights reserved.</div>
-  </div>
-</footer>
+        <!-- Optional settings for FormSubmit -->
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="thankyou.html" />
 
-<script>document.getElementById('y').textContent = (new Date).getFullYear();</script>
-<script src="script.js"></script>
+        <button type="submit" class="button">Send Message</button>
+      </form>
+    </section>
+
+    <section class="card" style="margin-top: 20px;">
+      <p class="section-text" style="margin: 0;">
+        Or email us at <a href="mailto:teams@happybiz.in">teams@happybiz.in</a><br />
+        Phone: +91 62834 04371
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="y"></span> Happy Biz. All rights reserved.</div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = (new Date).getFullYear();</script>
+  <script src="script.js"></script>
 </body>
 </html>
