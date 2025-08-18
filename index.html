@@ -1,18 +1,25 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Happy Biz — Reliable Accounting & Ops Support</title>
-<meta name="description" content="Reliable bookkeeping, reporting and workflow support for organisations and teams.">
-<link rel="stylesheet" href="styles.css">
-</head><body>
-<header class="header"><div class="container header-inner">
-  <div class="brand">Happy Biz</div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</div></header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Biz — Reliable Accounting & Ops Support</title>
+  <meta name="description" content="Reliable bookkeeping, reporting and workflow support for organisations and teams.">
+  <meta name="keywords" content="Accounting Services, Bookkeeping, Finance Support, Remote Operations, Happy Biz">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">Happy Biz</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
 <main class="container">
   <section class="hero">
@@ -26,27 +33,43 @@
 
   <section class="grid-3">
     <div class="card">
-      <div class="row"><img class="icon" src="assets/ops.svg" alt=<h3>Bookkeeping & Reconciliation</h3></div>
+      <div class="row">
+        <!-- Removed broken alt attributes -->
+        <h3>Bookkeeping & Reconciliation</h3>
+      </div>
       <p class="section-text">Bank/ledger recs, supplier bills, receivables and a clean month-end close.</p>
     </div>
     <div class="card">
-      <div class="row"><img class="icon" src="assets/report.svg" alt=><h3>Reporting & Insights</h3></div>
+      <div class="row">
+        <h3>Reporting & Insights</h3>
+      </div>
       <p class="section-text">Monthly packs: P&amp;L, Balance Sheet, AR/AP and GST/BAS/VAT returns.</p>
     </div>
     <div class="card">
-      <div class="row"><img class="icon" src="assets/flow.svg" alt="Workflow"><h3>Workflow & Admin</h3></div>
+      <div class="row">
+        <h3>Workflow & Admin</h3>
+      </div>
       <p class="section-text">Document handling, deadline tracking, and follow-ups so nothing slips.</p>
     </div>
   </section>
 
   <section class="grid-3" style="margin-top:16px">
-    <div class="card"><div class="kpi-label">Clients Served</div><div class="kpi-value">500+</div></div>
-    <div class="card"><div class="kpi-label">On-time Delivery</div><div class="kpi-value">98%</div></div>
-    <div class="card"><div class="kpi-label">Years Experience</div><div class="kpi-value">10+</div></div>
+    <div class="card">
+      <div class="kpi-label">Clients Served</div>
+      <div class="kpi-value">500+</div>
+    </div>
+    <div class="card">
+      <div class="kpi-label">On-time Delivery</div>
+      <div class="kpi-value">98%</div>
+    </div>
+    <div class="card">
+      <div class="kpi-label">Years Experience</div>
+      <div class="kpi-value">10+</div>
+    </div>
   </section>
 
   <section class="card" style="margin-top:20px">
-    <h3 style="margin:0 0 6px">How we engage</h3>
+    <h3>How we engage</h3>
     <ol class="list section-text">
       <li><b>Discovery</b> — scope, tools, timelines</li>
       <li><b>Handover</b> — access & templates, quick kickoff</li>
@@ -56,16 +79,18 @@
     </ol>
   </section>
 
-  <section class="card" style="margin-top:20px">
-    <p class="section-text" style="margin:0">
-      Email <a href="mailto:teams@happybiz.in">teams@happybiz.in</a> or call +91 62834 04371 to get started.
-    </p>
+  <section class="card" style="margin-top:20px; text-align:center">
+    <a href="mailto:teams@happybiz.in" class="btn">📩 Get Started Today</a>
   </section>
 </main>
 
-<footer class="footer"><div class="container footer-inner">
-  <div>© <span id="y"></span> Happy Biz. All rights reserved.</div>
-</div></footer>
-<script>document.getElementById('y').textContent=(new Date).getFullYear();</script>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© <span id="y"></span> Happy Biz. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent = (new Date).getFullYear();</script>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
