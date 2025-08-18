@@ -30,19 +30,26 @@
   </section>
 
   <section class="card" style="max-width:600px;margin:0 auto">
-    <form action="mailto:teams@happybiz.in" method="POST" enctype="text/plain">
+    <form action="https://formsubmit.co/teams@happybiz.in" method="POST">
       <div style="margin-bottom:16px">
         <label for="name">Your Name</label><br>
-        <input type="text" id="name" name="name" required style="width:100%;padding:10px;border-radius:6px;border:1px solid var(--line)">
+        <input type="text" id="name" name="name" required placeholder="Your Name">
       </div>
       <div style="margin-bottom:16px">
         <label for="email">Your Email</label><br>
-        <input type="email" id="email" name="email" required style="width:100%;padding:10px;border-radius:6px;border:1px solid var(--line)">
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
       </div>
       <div style="margin-bottom:16px">
         <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="5" required style="width:100%;padding:10px;border-radius:6px;border:1px solid var(--line)"></textarea>
+        <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
       </div>
+
+      <!-- Optional: Disable captcha (optional) -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Optional: Thank-you redirect -->
+      <!-- <input type="hidden" name="_next" value="https://happybiz.in/thanks.html"> -->
+
       <button type="submit" class="btn">📩 Send Message</button>
     </form>
   </section>
