@@ -1,13 +1,10 @@
-/* Happy Biz — neutral, professional theme */
 :root {
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --line: #e5e7eb;
-  --text: #111827;
-  --muted: #4b5563;
-  --brand: #0ea5e9;
-  --brand2: #0369a1;
-  --soft: #e0f2fe;
+  --bg: #ffffff;           /* white background */
+  --card: #ffffff;         /* white cards */
+  --line: #e5e7eb;         /* light grey border */
+  --text: #111827;         /* dark text */
+  --muted: #4b5563;        /* muted gray text */
+  --highlight: #f9fafb;    /* soft hover or badge bg */
 }
 
 * {
@@ -23,12 +20,12 @@ html, body {
 }
 
 a {
-  color: var(--brand2);
+  color: var(--text);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--brand);
+  color: var(--muted);
 }
 
 .container {
@@ -42,7 +39,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: #fff;
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
 }
 
@@ -51,27 +48,18 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   height: 64px;
-  padding-top: 2px;
 }
 
 .brand {
   font-weight: 800;
   font-size: 22px;
-  color: var(--brand2);
-  letter-spacing: -0.25px;
+  color: var(--text);
   padding: 8px 12px;
   margin-left: 4px;
   border-radius: 8px;
   display: inline-block;
   line-height: 1.2;
-  transition: background 0.2s ease;
   text-decoration: none;
-  background: transparent;
-}
-
-.brand:hover {
-  background: var(--soft);
-  color: var(--brand);
 }
 
 .nav {
@@ -83,18 +71,18 @@ a:hover {
 .nav a {
   padding: 8px 12px;
   border-radius: 10px;
-  color: #374151;
+  color: var(--text);
   font-weight: 500;
 }
 
 .nav a:hover {
-  background: #f3f4f6;
-  color: var(--brand2);
+  background: var(--highlight);
+  color: var(--muted);
 }
 
 .nav a.active {
-  background: var(--soft);
-  color: var(--brand2);
+  background: var(--highlight);
+  color: var(--text);
 }
 
 /* Layout */
@@ -127,7 +115,7 @@ p.section-text {
 
 .lead {
   font-size: 18px;
-  color: #1f2937;
+  color: var(--text);
 }
 
 /* Cards & grids */
@@ -136,7 +124,7 @@ p.section-text {
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 18px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
 .grid-3 {
@@ -172,12 +160,12 @@ p.section-text {
 .kpi-value {
   font-size: 24px;
   font-weight: 800;
-  color: #111827;
+  color: var(--text);
 }
 
 /* Footer */
 .footer {
-  background: #fff;
+  background: var(--bg);
   border-top: 1px solid var(--line);
   margin-top: 40px;
 }
@@ -197,8 +185,8 @@ p.section-text {
 /* Utilities */
 .badge {
   display: inline-block;
-  background: var(--soft);
-  color: var(--brand2);
+  background: var(--highlight);
+  color: var(--text);
   font-weight: 600;
   font-size: 14px;
   padding: 4px 12px;
@@ -211,7 +199,7 @@ p.section-text {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--brand);
+  background: #111827;
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
@@ -224,7 +212,7 @@ p.section-text {
 }
 
 .btn:hover {
-  background: var(--brand2);
+  background: #374151;
 }
 
 .btn img {
@@ -245,6 +233,8 @@ textarea {
   width: 100%;
   box-sizing: border-box;
   margin-top: 4px;
+  background: white;
+  color: var(--text);
 }
 
 label {
@@ -258,7 +248,7 @@ a:focus,
 .btn:focus,
 input:focus,
 textarea:focus {
-  outline: 2px solid var(--brand2);
+  outline: 2px solid var(--text);
   outline-offset: 2px;
 }
 
