@@ -33,6 +33,14 @@
 
     <section class="card" style="margin-top: 20px;">
       <form action="https://formsubmit.co/teams@happybiz.in" method="POST">
+        <!-- Honeypot field (hidden) -->
+        <input type="text" name="_honey" style="display:none">
+
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="thankyou.html" />
+
         <div style="margin-bottom: 16px;">
           <label for="name">Your Name</label><br />
           <input type="text" id="name" name="name" required />
@@ -48,10 +56,8 @@
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
-        <!-- Optional settings for FormSubmit -->
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_next" value="thankyou.html" />
+        <!-- Google reCAPTCHA -->
+        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
 
         <button type="submit" class="button">Send Message</button>
       </form>
@@ -72,5 +78,7 @@
   </footer>
   <script>document.getElementById('y').textContent = (new Date).getFullYear();</script>
   <script src="script.js"></script>
+  <!-- Load Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
