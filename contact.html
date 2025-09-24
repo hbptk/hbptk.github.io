@@ -32,9 +32,17 @@
     </section>
 
     <section class="card" style="margin-top: 20px;">
-      <form action="https://formsubmit.co/teams@happybiz.in" method="POST">
-        <!-- Honeypot field (hidden) -->
-        <input type="text" name="_honey" style="display:none">
+      <!-- ✅ Patched Form -->
+      <form id="contactForm" action="https://formsubmit.co/teams@happybiz.in" method="POST" novalidate>
+        <!-- Honeypot (hidden) -->
+        <div style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+          <label>Company</label>
+          <input type="text" name="company" autocomplete="off" tabindex="-1" />
+        </div>
+
+        <!-- Hidden anti-bot fields -->
+        <input type="hidden" id="js_token" name="js_token" value="">
+        <input type="hidden" id="form_start" name="form_start" value="">
 
         <!-- FormSubmit settings -->
         <input type="hidden" name="_captcha" value="false" />
@@ -76,9 +84,37 @@
       <div>© <span id="y"></span> Happy Biz. All rights reserved.</div>
     </div>
   </footer>
+
   <script>document.getElementById('y').textContent = (new Date).getFullYear();</script>
   <script src="script.js"></script>
-  <!-- Load Google reCAPTCHA -->
+
+  <!-- Anti-bot JS -->
+  <script>
+    (function(){
+      const form = document.getElementById('contactForm');
+      document.getElementById('form_start').value = Date.now();
+      const token = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      document.getElementById('js_token').value = token;
+
+      form.addEventListener('submit', function(e){
+        const start = parseInt(document.getElementById('form_start').value || "0", 10);
+        const now = Date.now();
+        if (start && (now - start) < 3000) {
+          e.preventDefault();
+          alert('Please take a moment before sending.');
+          return false;
+        }
+        const hp = form.querySelector('input[name="company"]').value;
+        if (hp && hp.trim().length > 0) {
+          e.preventDefault();
+          console.log('Honeypot filled — blocked.');
+          return false;
+        }
+      });
+    })();
+  </script>
+
+  <!-- Load reCAPTCHA -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
